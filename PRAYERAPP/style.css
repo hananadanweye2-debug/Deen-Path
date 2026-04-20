@@ -1,0 +1,205 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f4f7f6;
+  padding-bottom: 70px;
+  transition: all 0.3s ease;
+}
+
+/* APP CONTAINER */
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 5px 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+/* 🌟 CARDS (UPGRADED) */
+.card {
+  background: white;
+  padding: 16px 10px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  aspect-ratio: 1 / 1;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* hover effect */
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+/* click effect */
+.card:active {
+  transform: scale(0.97);
+}
+
+/* highlight card */
+.card.highlight {
+  background: #2ecc71;
+  color: white;
+}
+
+/* 🌟 BUTTONS (UPGRADED) */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background: #3498db;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button.secondary {
+  background: #7f8c8d;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  justify-content: space-around;
+
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+
+  transition: all 0.3s ease;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: #3498db;
+}
+
+/* TEXT ELEMENTS */
+.prayer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.prayer-quote {
+  margin: 10px 0;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* 🌙 DARK MODE (FIXED + COMPLETE) */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark .navbar {
+  background: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+body.dark .navbar a {
+  color: white;
+}
+
+body.dark .modal-content {
+  background: #1e1e1e;
+  color: white;
+}
